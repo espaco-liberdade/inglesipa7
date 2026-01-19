@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7: Com Que Frequência? – Advérbios e Detalhes da Rotina</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1, h2, h3, h4 { color: #2c3e50; }
+        h1 {
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            color: #2980b9;
+        }
+        h2 { border-left: 5px solid #3498db; padding-left: 10px; margin-top: 30px; }
+        
+        /* Navegação */
+        .nav-menu { text-align: center; margin: 20px 0; }
+        .btn-menu {
+            display: inline-block;
+            background-color: #34495e;
+            color: #ffffff;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-menu:hover { background-color: #2c3e50; transform: translateY(-2px); }
+
+        /* Caixas de Texto */
+        .theme-intro {
+            background-color: #eaf2f8;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+        .nota-gramatical, .nota-dica, .secao-exercicios, .tarefa-extra, .secao-gabarito {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        .nota-dica { border-left-color: #16a085; background-color: #e8f8f5; }
+        .tarefa-extra { border-left-color: #9b59b6; background-color: #fbf6fd; }
+        .secao-gabarito { border-left-color: #2ecc71; background-color: #f0fff4; }
+
+        /* Tabelas */
+        .table-responsive-wrapper { overflow-x: auto; margin: 20px 0; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #dcdcdc;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th { background-color: #34495e; color: #fff; }
+        tr:nth-child(even) { background-color: #f8f9fa; }
+
+        /* Estilos de Texto e IPA */
+        code {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #c0392b;
+            display: inline-block;
+            margin: 2px 0;
+        }
+        .ipa-phrase-block { display: block; margin-top: 5px; }
+        .character-portuguese-phonetics {
+            font-style: italic;
+            color: #27ae60;
+            display: block;
+            margin-top: 2px;
+            font-weight: 500;
+        }
+        .translation-line {
+            display: block;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 4px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 2px;
+        }
+        
+        /* Botões de Áudio */
+        .audio-link {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 1.3em;
+            color: #3498db;
+            vertical-align: middle;
+            transition: transform 0.2s;
+        }
+        .audio-link:hover { transform: scale(1.2); color: #2980b9; }
+        
+        .example-word { font-weight: bold; color: #2980b9; }
+        .fill-in-blank {
+            display: inline-block;
+            width: 120px;
+            border-bottom: 2px solid #7f8c8d;
+            text-align: center;
+            color: #2980b9;
+            font-weight: bold;
+        }
+        
+        /* Listas */
+        ul.no-bullets { list-style-type: none; padding: 0; }
+        ul.no-bullets li { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #eee; }
+        .quiz-options { list-style-type: none; padding-left: 0; }
+        .quiz-options li { margin-bottom: 10px; padding: 5px; background: #fff; border-radius: 4px; }
+        
+        .hidden-answer {
+            background-color: #333;
+            color: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.3s;
+        }
+        .hidden-answer:hover { color: #fff; }
+
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            table { font-size: 0.85em; }
+            th, td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Menu Superior -->
+        <div class="nav-menu">
+            <a href="https://espaco-liberdade.github.io/inglesipa/" class="btn-menu">⬅ Voltar ao Menu</a>
+        </div>
+
+        <h1>Aula 7: Com Que Frequência? – Advérbios e Detalhes da Rotina<br>(How Often? – Adverbs and Routine Details)</h1>
+
+        <div class="theme-intro">
+            <p>Olá, estudante! Bem-vindo(a) à Aula 7!</p>
+            <p>Nesta aula, vamos adicionar mais detalhes às nossas conversas sobre rotinas, focando em <strong>Esportes, exercícios físicos e frequência de atividades</strong>. Vamos aprender a usar os <strong>Advérbios de Frequência</strong> para dizer quão regularmente fazemos algo, os <strong>Pronomes Objeto</strong> para indicar quem recebe a ação, e os <strong>Adjetivos Possessivos</strong> para mostrar de quem algo é. Prepare-se para falar sobre seus hábitos esportivos com mais precisão!</p>
+        </div>
+
+        <h2>7. Detalhando Nossas Ações</h2>
+
+        <section id="adverbios-frequencia">
+            <h3>7.1 Marcando a Frequência: Advérbios (Always, Usually, Often, Sometimes, Rarely, Never)</h3>
+            <p><strong>Advérbios de Frequência (Adverbs of Frequency)</strong> nos dizem com que regularidade uma ação acontece. Eles são muito importantes para descrever hábitos e rotinas.</p>
+            <p>Aqui estão os mais comuns, em ordem aproximada de frequência:</p>
+            <ul class="no-bullets">
+                <li>
+                    <strong>Always</strong> (Sempre - 100%) <button onclick="playAudio('Always')" class="audio-link">🔊</button> - <code>/ˈɔːlweɪz/</code> <span class="character-portuguese-phonetics">(ÓL-ueiz)</span>
+                    <br>Ex: I <span class="example-word">always</span> warm up before exercising. <button onclick="playAudio('I always warm up before exercising')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Eu sempre me aqueço antes de me exercitar.</strong>
+                    <br><span class="ipa-phrase-block"><code>/aɪ ˈɔːlweɪz wɔːrm ʌp bɪˈfɔːr ˈeksərsaɪzɪŋ/</code></span>
+                    <span class="character-portuguese-phonetics">(ÁI ÓL-ueiz UÓRM ÂP bi-FÓR ÉK-sãr-sai-zin)</span>
+                </li>
+                <li>
+                    <strong>Usually / Normally</strong> (Geralmente - 90%) <button onclick="playAudio('Usually')" class="audio-link">🔊</button> - <code>/ˈjuːʒuəli/</code> <span class="character-portuguese-phonetics">(IÚU-jua-li)</span>
+                    <br>Ex: She <span class="example-word">usually</span> goes to the gym after work. <button onclick="playAudio('She usually goes to the gym after work')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Ela geralmente vai à academia depois do trabalho.</strong>
+                    <br><span class="ipa-phrase-block"><code>/ʃiː ˈjuːʒuəli ɡoʊz tə ðə dʒɪm ˈæftər wɜːrk/</code></span>
+                    <span class="character-portuguese-phonetics">(XÍI IÚU-jua-li GÔUZ tã dhã DJÊM ÉF-tãr UÃRK)</span>
+                </li>
+                <li>
+                    <strong>Often / Frequently</strong> (Frequentemente - 70%) <button onclick="playAudio('Often')" class="audio-link">🔊</button> - <code>/ˈɔːfn/</code> <span class="character-portuguese-phonetics">(Ó-fãn)</span>
+                    <br>Ex: We <span class="example-word">often</span> play soccer on Saturdays. <button onclick="playAudio('We often play soccer on Saturdays')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Nós frequentemente jogamos futebol aos sábados.</strong>
+                    <br><span class="ipa-phrase-block"><code>/wiː ˈɔːfn pleɪ ˈsɑːkər ɑːn ˈsætərdeɪz/</code></span>
+                    <span class="character-portuguese-phonetics">(UÍI Ó-fãn PLÊI SÓ-cãr ón SÉ-tãr-deiz)</span>
+                </li>
+                <li>
+                    <strong>Sometimes / Occasionally</strong> (Às vezes - 50%) <button onclick="playAudio('Sometimes')" class="audio-link">🔊</button> - <code>/ˈsʌmtaɪmz/</code> <span class="character-portuguese-phonetics">(SÂM-taimz)</span>
+                    <br>Ex: They <span class="example-word">sometimes</span> go cycling in the park. <button onclick="playAudio('They sometimes go cycling in the park')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Eles às vezes andam de bicicleta no parque.</strong>
+                    <br><span class="ipa-phrase-block"><code>/ðeɪ ˈsʌmtaɪmz ɡoʊ ˈsaɪklɪŋ ɪn ðə pɑːrk/</code></span>
+                    <span class="character-portuguese-phonetics">(DHÊI SÂM-taimz GÔU SÁI-klin în dhã PÁRK)</span>
+                </li>
+                <li>
+                    <strong>Rarely</strong> (Raramente - 10-20%) <button onclick="playAudio('Rarely')" class="audio-link">🔊</button> - <code>/ˈrerli/</code> <span class="character-portuguese-phonetics">(RÉRLI)</span>
+                    <br>Ex: He <span class="example-word">rarely</span> misses a training session. <button onclick="playAudio('He rarely misses a training session')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Ele raramente perde um treino.</strong>
+                    <br><span class="ipa-phrase-block"><code>/hiː ˈrerli ˈmɪsɪz ə ˈtreɪnɪŋ ˈseʃn/</code></span>
+                    <span class="character-portuguese-phonetics">(RÍI RÉRLI MÊ-sêz ã TRÊI-nin SÉ-shãn)</span>
+                </li>
+                <li>
+                    <strong>Hardly ever</strong> (Quase nunca - 5%) <button onclick="playAudio('Hardly ever')" class="audio-link">🔊</button> - <code>/ˈhɑːrdli ˈevər/</code> <span class="character-portuguese-phonetics">(RÁRD-li É-võr)</span>
+                    <br>Ex: I <span class="example-word">hardly ever</span> watch sports on TV. <button onclick="playAudio('I hardly ever watch sports on TV')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Eu quase nunca assisto esportes na TV.</strong>
+                    <br><span class="ipa-phrase-block"><code>/aɪ ˈhɑːrdli ˈevər wɑːtʃ spɔːrts ɑːn ˌtiːˈviː/</code></span>
+                    <span class="character-portuguese-phonetics">(ÁI RÁRD-li É-võr UÓTCH SPÓRTS ón tíi-VÍI)</span>
+                </li>
+                <li>
+                    <strong>Never</strong> (Nunca - 0%) <button onclick="playAudio('Never')" class="audio-link">🔊</button> - <code>/ˈnevər/</code> <span class="character-portuguese-phonetics">(NÉ-võr)</span>
+                    <br>Ex: She <span class="example-word">never</span> skips her morning run. <button onclick="playAudio('She never skips her morning run')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Ela nunca pula sua corrida matinal.</strong>
+                    <br><span class="ipa-phrase-block"><code>/ʃiː ˈnevər skɪps hər ˈmɔːrnɪŋ rʌn/</code></span>
+                    <span class="character-portuguese-phonetics">(XÍI NÉ-võr SKÊPS rãr MÓR-nin RÂN)</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="posicao-adverbios">
+            <h3>7.2 Onde Colocar os Advérbios de Frequência na Frase</h3>
+            <p>A posição dos advérbios de frequência pode variar, mas existem algumas regras gerais:</p>
+            <ol>
+                <li><strong>Antes do verbo principal:</strong><br>
+                    Ex: I <span class="example-word">usually</span> <strong>play</strong> tennis on Sundays. <button onclick="playAudio('I usually play tennis on Sundays')" class="audio-link">🔊</button><br>
+                    Tradução: <strong>Eu geralmente jogo tênis aos domingos.</strong><br>
+                    <code>/aɪ ˈjuːʒuəli pleɪ ˈtenɪs ɑːn ˈsʌndeɪz/</code> <span class="character-portuguese-phonetics">(ÁI IÚU-jua-li PLÊI TÉ-nês ón SÂN-deiz)</span>
+                </li>
+                <li><strong>Depois do verbo "To Be" (am, is, are):</strong><br>
+                    Ex: She <strong>is</strong> <span class="example-word">always</span> ready for a game. <button onclick="playAudio('She is always ready for a game')" class="audio-link">🔊</button><br>
+                    Tradução: <strong>Ela está sempre pronta para um jogo.</strong><br>
+                    <code>/ʃiː ɪz ˈɔːlweɪz ˈredi fər ə ɡeɪm/</code> <span class="character-portuguese-phonetics">(XÍI ÊZ ÓL-ueiz RÉ-di fór ã GUÊIM)</span>
+                </li>
+                <li><strong>Entre o verbo auxiliar e o verbo principal:</strong><br>
+                    Ex: I <strong>don't</strong> <span class="example-word">usually</span> <strong>watch</strong> basketball. <button onclick="playAudio('I don\'t usually watch basketball')" class="audio-link">🔊</button><br>
+                    Tradução: <strong>Eu geralmente não assisto basquete.</strong><br>
+                    <code>/aɪ doʊnt ˈjuːʒuəli wɑːtʃ ˈbæskɪtbɔːl/</code> <span class="character-portuguese-phonetics">(ÁI DÔUNT IÚU-jua-li UÓTCH BÉS-kêt-ból)</span>
+                </li>
+            </ol>
+            <div class="nota-dica">
+                <h4>Flexibilidade de "Sometimes" e "Usually"</h4>
+                <p>Os advérbios <strong>sometimes</strong> e <strong>usually</strong> também podem aparecer no início ou no final da frase para dar ênfase.</p>
+            </div>
+        </section>
+
+        <section id="pronomes-objeto">
+            <h3>7.3 Para Mim, Para Você: Pronomes Objeto (Me, You, Him, Her, It, Us, Them)</h3>
+            <p><strong>Pronomes Objeto (Object Pronouns)</strong> substituem substantivos que recebem a ação do verbo. Eles vêm <strong>depois</strong> do verbo ou de uma preposição.</p>
+            <div class="table-responsive-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">Sujeito</th>
+                            <th style="width: 10%;">Objeto</th>
+                            <th style="width: 40%;">Exemplo (Inglês)</th>
+                            <th style="width: 40%;">Tradução, IPA & Simplificada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I</td>
+                            <td><strong>me</strong></td>
+                            <td>He plays tennis with <span class="example-word">me</span>. <button onclick="playAudio('He plays tennis with me')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">Ele joga tênis comigo.</span>
+                                <code>/hiː pleɪz ˈtenɪs wɪð miː/</code><br>
+                                <span class="character-portuguese-phonetics">(RÍI PLÊIZ TÉ-nês uêDH MÍI)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>You</td>
+                            <td><strong>you</strong></td>
+                            <td>The coach trains <span class="example-word">you</span> well. <button onclick="playAudio('The coach trains you well')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">O treinador treina você bem.</span>
+                                <code>/ðə koʊtʃ treɪnz juː wel/</code><br>
+                                <span class="character-portuguese-phonetics">(dhã CÔUTCH TRÊINZ IÚU UÉL)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td><strong>him</strong></td>
+                            <td>She passed the ball to <span class="example-word">him</span>. <button onclick="playAudio('She passed the ball to him')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">Ela passou a bola para ele.</span>
+                                <code>/ʃiː pæst ðə bɔːl tə ɪm/</code><br>
+                                <span class="character-portuguese-phonetics">(XÍI PÉST dhã BÓL tã ÊM)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>She</td>
+                            <td><strong>her</strong></td>
+                            <td>We invited <span class="example-word">her</span> to play volleyball. <button onclick="playAudio('We invited her to play volleyball')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">Nós a convidamos para jogar vôlei.</span>
+                                <code>/wiː ɪnˈvaɪtɪd hər tə pleɪ ˈvɑːlibɔːl/</code><br>
+                                <span class="character-portuguese-phonetics">(UÍI în-VÁI-têd RÃR tã PLÊI VÓ-li-ból)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>It</td>
+                            <td><strong>it</strong></td>
+                            <td>The dog chases <span class="example-word">it</span> (the ball). <button onclick="playAudio('The dog chases it')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">O cachorro a persegue (a bola).</span>
+                                <code>/ðə dɔːɡ ˈtʃeɪsɪz ɪt/</code><br>
+                                <span class="character-portuguese-phonetics">(dhã DÓG TCHÊI-sêz ÊT)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>We</td>
+                            <td><strong>us</strong></td>
+                            <td>They always beat <span class="example-word">us</span> at soccer. <button onclick="playAudio('They always beat us at soccer')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">Eles sempre nos vencem no futebol.</span>
+                                <code>/ðeɪ ˈɔːlweɪz biːt ʌs æt ˈsɑːkər/</code><br>
+                                <span class="character-portuguese-phonetics">(DHÊI ÓL-ueiz BÍIT ÂS ét SÓ-cãr)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>They</td>
+                            <td><strong>them</strong></td>
+                            <td>I see <span class="example-word">them</span> running every morning. <button onclick="playAudio('I see them running every morning')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">Eu os vejo correndo toda manhã.</span>
+                                <code>/aɪ siː ðəm ˈrʌnɪŋ ˈevri ˈmɔːrnɪŋ/</code><br>
+                                <span class="character-portuguese-phonetics">(ÁI SÍI dhãm RÂ-nin É-vri MÓR-nin)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="adjetivos-possessivos">
+            <h3>7.4 De Quem é Isso? Adjetivos Possessivos (My, Your, His, Her, Its, Our, Their)</h3>
+            <p><strong>Adjetivos Possessivos (Possessive Adjectives)</strong> indicam posse ou a quem algo pertence. Eles sempre vêm <strong>antes</strong> de um substantivo.</p>
+            <div class="table-responsive-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">Sujeito</th>
+                            <th style="width: 10%;">Possessivo</th>
+                            <th style="width: 40%;">Exemplo (Inglês)</th>
+                            <th style="width: 40%;">Tradução, IPA & Simplificada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>I</td>
+                            <td><strong>my</strong></td>
+                            <td>This is <span class="example-word">my</span> favorite sport. <button onclick="playAudio('This is my favorite sport')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">Este é meu esporte favorito.</span>
+                                <code>/ðɪs ɪz maɪ ˈfeɪvərɪt spɔːrt/</code><br>
+                                <span class="character-portuguese-phonetics">(DHÊS ÊZ MÁI FÊI-võ-rêt SPÓRT)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>You</td>
+                            <td><strong>your</strong></td>
+                            <td>Where are <span class="example-word">your</span> running shoes? <button onclick="playAudio('Where are your running shoes?')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">Onde estão seus tênis de corrida?</span>
+                                <code>/wer ɑːr jɔːr ˈrʌnɪŋ ʃuːz/</code><br>
+                                <span class="character-portuguese-phonetics">(UÉR ÁR iór RÂ-nin XÚUZ?)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>He</td>
+                            <td><strong>his</strong></td>
+                            <td><span class="example-word">His</span> team won the game. <button onclick="playAudio('His team won the game')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">O time dele venceu o jogo.</span>
+                                <code>/hɪz tiːm wʌn ðə ɡeɪm/</code><br>
+                                <span class="character-portuguese-phonetics">(RÊZ TÍIM UÂN dhã GUÊIM)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>She</td>
+                            <td><strong>her</strong></td>
+                            <td><span class="example-word">Her</span> bicycle is new. <button onclick="playAudio('Her bicycle is new')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">A bicicleta dela é nova.</span>
+                                <code>/hər ˈbaɪsɪkl ɪz nuː/</code><br>
+                                <span class="character-portuguese-phonetics">(RÃR BÁI-sĩ-cõl ÊZ NÚU)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>It</td>
+                            <td><strong>its</strong></td>
+                            <td>The team celebrates <span class="example-word">its</span> victory. <button onclick="playAudio('The team celebrates its victory')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">O time celebra sua vitória.</span>
+                                <code>/ðə tiːm ˈseləbreɪts ɪts ˈvɪktəri/</code><br>
+                                <span class="character-portuguese-phonetics">(dhã TÍIM SÉ-lã-breits ÊTS VÊK-tõ-ri)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>We</td>
+                            <td><strong>our</strong></td>
+                            <td><span class="example-word">Our</span> coach gives good advice. <button onclick="playAudio('Our coach gives good advice')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">Nosso técnico dá bons conselhos.</span>
+                                <code>/aʊər koʊtʃ ɡɪvz ɡʊd ədˈvaɪs/</code><br>
+                                <span class="character-portuguese-phonetics">(ÁU-ãr CÔUTCH GUÊVZ GÚDãd-VÁIS)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>They</td>
+                            <td><strong>their</strong></td>
+                            <td><span class="example-word">Their</span> yoga class is on Mondays. <button onclick="playAudio('Their yoga class is on Mondays')" class="audio-link">🔊</button></td>
+                            <td>
+                                <span class="translation-line">A aula de ioga deles é às segundas.</span>
+                                <code>/ðer ˈjoʊɡə klæs ɪz ɑːn ˈmʌndeɪz/</code><br>
+                                <span class="character-portuguese-phonetics">(DHÉR IÔU-gã KLÉS ÊZ ón MÂN-deiz)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="nota-dica">
+                <h4>Cuidado: "Its" vs. "It's"</h4>
+                <p>Não confunda <strong>its</strong> (adjetivo possessivo, sem apóstrofo) com <strong>it's</strong> (contração de "it is" ou "it has", com apóstrofo).</p>
+                <p>Ex: The dog wags <span class="example-word">its</span> tail. (O cachorro abana o rabo dele.) <button onclick="playAudio('The dog wags its tail')" class="audio-link">🔊</button></p>
+                <p>Ex: <span class="example-word">It's</span> a sunny day. (É um dia ensolarado.) <button onclick="playAudio('It\'s a sunny day')" class="audio-link">🔊</button></p>
+            </div>
+        </section>
+
+        <section id="pratica-integrada">
+             <h3>7.5 Prática: Descrevendo a Frequência de Atividades Esportivas</h3>
+            <p>Vamos ver alguns exemplos combinando o que aprendemos:</p>
+            <ul class="no-bullets">
+                <li>
+                    I <span class="example-word">sometimes</span> play basketball with <span class="example-word">him</span>. <span class="example-word">His</span> shots are very strong. <button onclick="playAudio('I sometimes play basketball with him. His shots are very strong')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Eu às vezes jogo basquete com ele. Os arremessos dele são muito fortes.</strong>
+                    <br><code>/aɪ ˈsʌmtaɪmz pleɪ ˈbæskɪtbɔːl wɪð ɪm hɪz ʃɑːts ɑːr ˈveri strɔːŋ/</code>
+                    <br><span class="character-portuguese-phonetics">(ÁI SÂM-taimz PLÊI BÉS-kêt-ból uêDH ÊM. RÊZ XÓTS ÁR VÉ-ri STRÓN)</span>
+                </li>
+                <li>
+                    She <span class="example-word">always</span> takes <span class="example-word">her</span> dog for a walk. The coach motivates <span class="example-word">us</span>. <button onclick="playAudio('She always takes her dog for a walk. The coach motivates us.')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Ela sempre leva o cachorro dela para passear. O técnico nos motiva.</strong>
+                    <br><code>/ʃiː ˈɔːlweɪz teɪks hər dɔːɡ fər ə wɔːk/</code>
+                    <br><span class="character-portuguese-phonetics">(XÍI ÓL-ueiz TÊIKS rãr DÓG fór ã UÓK)</span>
+                </li>
+                <li>
+                    <span class="example-word">Our</span> team <span class="example-word">rarely</span> loses a match because <span class="example-word">their</span> strategy is good. <button onclick="playAudio('Our team rarely loses a match because their strategy is good.')" class="audio-link">🔊</button>
+                    <br>Tradução: <strong>Nosso time raramente perde uma partida porque a estratégia deles é boa.</strong>
+                    <br><code>/aʊər tiːm ˈrerli ˈluːzɪz ə mætʃ bɪˈkɔːz ðer ˈstrætədʒi ɪz ɡʊd/</code>
+                    <br><span class="character-portuguese-phonetics">(ÁU-ãr TÍIM RÉRLI LÚU-zêz ã MÉCH bi-CÓZ dhér STRÉ-tã-dji ÊZ GÚD)</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="vocabulario">
+            <h3>Vocabulário da Aula: Esportes, Exercícios e Frequência</h3>
+            <p>Expanda seu vocabulário para falar sobre atividades físicas! A tabela abaixo foi otimizada para mostrar o exemplo e a tradução juntos.</p>
+            <div class="table-responsive-wrapper">
+                <table class="vocab-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Item (Português)</th>
+                            <th style="width: 25%;">Palavra (Inglês) & Pronúncia</th>
+                            <th style="width: 55%;">Exemplo, Tradução & Áudio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Futebol</td>
+                            <td><span class="example-word">Soccer</span><br><code>/ˈsɑːkər/</code><br><span class="character-portuguese-phonetics">(SÓ-cãr)</span></td>
+                            <td>
+                                They often play soccer after school. <button onclick="playAudio('They often play soccer after school')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Eles frequentemente jogam futebol depois da escola.</span><br>
+                                <code>/ðeɪ ˈɔːfn pleɪ ˈsɑːkər ˈæftər skuːl/</code><br>
+                                <span class="character-portuguese-phonetics">(DHÊI Ó-fãn PLÊI SÓ-cãr ÉF-tãr SKÚUL)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Basquete</td>
+                            <td><span class="example-word">Basketball</span><br><code>/ˈbæskɪtbɔːl/</code><br><span class="character-portuguese-phonetics">(BÉS-kêt-ból)</span></td>
+                            <td>
+                                My brother loves basketball. <button onclick="playAudio('My brother loves basketball')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Meu irmão ama basquete.</span><br>
+                                <code>/maɪ ˈbrʌðər lʌvz ˈbæskɪtbɔːl/</code><br>
+                                <span class="character-portuguese-phonetics">(MÁI BRÂ-dhãr LÂVZ BÉS-kêt-ból)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tênis</td>
+                            <td><span class="example-word">Tennis</span><br><code>/ˈtenɪs/</code><br><span class="character-portuguese-phonetics">(TÉ-nês)</span></td>
+                            <td>
+                                Do you play tennis? <button onclick="playAudio('Do you play tennis?')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Você joga tênis?</span><br>
+                                <code>/duː juː pleɪ ˈtenɪs/</code><br>
+                                <span class="character-portuguese-phonetics">(DÚU IÚU PLÊI TÉ-nês?)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Natação</td>
+                            <td><span class="example-word">Swimming</span><br><code>/ˈswɪmɪŋ/</code><br><span class="character-portuguese-phonetics">(SUÍ-min)</span></td>
+                            <td>
+                                Swimming is my favorite exercise. <button onclick="playAudio('Swimming is my favorite exercise')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Natação é meu exercício favorito.</span><br>
+                                <code>/ˈswɪmɪŋ ɪz maɪ ˈfeɪvərɪt ˈeksərsaɪz/</code><br>
+                                <span class="character-portuguese-phonetics">(SUÍ-min ÊZ mái FÊI-võ-rêt ÉK-sãr-saiz)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Corrida</td>
+                            <td><span class="example-word">Running</span><br><code>/ˈrʌnɪŋ/</code><br><span class="character-portuguese-phonetics">(RÂ-nin)</span></td>
+                            <td>
+                                I go running three times a week. <button onclick="playAudio('I go running three times a week')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Eu corro três vezes por semana.</span><br>
+                                <code>/aɪ ɡoʊ ˈrʌnɪŋ θriː taɪmz ə wiːk/</code><br>
+                                <span class="character-portuguese-phonetics">(ÁI GÔU RÂ-nin THRÍI TÁIMZ ã UÍIK)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ciclismo</td>
+                            <td><span class="example-word">Cycling</span><br><code>/ˈsaɪklɪŋ/</code><br><span class="character-portuguese-phonetics">(SÁI-klin)</span></td>
+                            <td>
+                                They sometimes go cycling on the weekend. <button onclick="playAudio('They sometimes go cycling on the weekend')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Eles às vezes andam de bicicleta no fim de semana.</span><br>
+                                <code>/ðeɪ ˈsʌmtaɪmz ɡoʊ ˈsaɪklɪŋ ɑːn ðə ˈwiːkend/</code><br>
+                                <span class="character-portuguese-phonetics">(DHÊI SÂM-taimz GÔU SÁI-klin ón dhã UÍI-kénd)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ioga</td>
+                            <td><span class="example-word">Yoga</span><br><code>/ˈjoʊɡə/</code><br><span class="character-portuguese-phonetics">(IÔU-gã)</span></td>
+                            <td>
+                                Her yoga class helps her relax. <button onclick="playAudio('Her yoga class helps her relax')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">A aula de ioga dela a ajuda a relaxar.</span><br>
+                                <code>/hər ˈjoʊɡə klæs helps hər rɪˈlæks/</code><br>
+                                <span class="character-portuguese-phonetics">(RÃR IÔU-gã KLÉS RÉLPS rãr ri-LÉKS)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Academia</td>
+                            <td><span class="example-word">Gym</span><br><code>/dʒɪm/</code><br><span class="character-portuguese-phonetics">(DJÊM)</span></td>
+                            <td>
+                                He rarely goes to the gym. <button onclick="playAudio('He rarely goes to the gym')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Ele raramente vai à academia.</span><br>
+                                <code>/hiː ˈrerli ɡoʊz tə ðə dʒɪm/</code><br>
+                                <span class="character-portuguese-phonetics">(RÍI RÉRLI GÔUZ tã dhã DJÊM)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Exercício</td>
+                            <td><span class="example-word">Exercise</span><br><code>/ˈeksərsaɪz/</code><br><span class="character-portuguese-phonetics">(ÉK-sãr-saiz)</span></td>
+                            <td>
+                                We exercise to stay healthy. <button onclick="playAudio('We exercise to stay healthy')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Nós nos exercitamos para ficar saudáveis.</span><br>
+                                <code>/wiː ˈeksərsaɪz tə steɪ ˈhelθi/</code><br>
+                                <span class="character-portuguese-phonetics">(UÍI ÉK-sãr-saiz tã STÊI RÉL-thi)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aquecimento</td>
+                            <td><span class="example-word">Warm-up</span><br><code>/ˈwɔːrm ʌp/</code><br><span class="character-portuguese-phonetics">(UÓRM ÂP)</span></td>
+                            <td>
+                                A good warm-up is always important. <button onclick="playAudio('A good warm-up is always important')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Um bom aquecimento é sempre importante.</span><br>
+                                <code>/ə ɡʊd ˈwɔːrm ʌp ɪz ˈɔːlweɪz ɪmˈpɔːrtənt/</code><br>
+                                <span class="character-portuguese-phonetics">(ã GÚD UÓRM ÂP ÊZ ÓL-ueiz îm-PÓR-tãnt)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Alongamento</td>
+                            <td><span class="example-word">Stretching</span><br><code>/ˈstretʃɪŋ/</code><br><span class="character-portuguese-phonetics">(STRÉ-tchin)</span></td>
+                            <td>
+                                I usually do my stretching after my run. <button onclick="playAudio('I usually do my stretching after my run')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Eu geralmente faço meu alongamento depois da corrida.</span><br>
+                                <code>/aɪ ˈjuːʒuəli duː maɪ ˈstretʃɪŋ ˈæftər maɪ rʌn/</code><br>
+                                <span class="character-portuguese-phonetics">(ÁI IÚU-jua-li DÚU mái STRÉ-tchin ÉF-tãr mái RÂN)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Treino</td>
+                            <td><span class="example-word">Training</span><br><code>/ˈtreɪnɪŋ/</code><br><span class="character-portuguese-phonetics">(TRÊI-nin)</span></td>
+                            <td>
+                                His training schedule is intense. <button onclick="playAudio('His training schedule is intense')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">O cronograma de treino dele é intenso.</span><br>
+                                <code>/hɪz ˈtreɪnɪŋ ˈskedʒuːl ɪz ɪnˈtens/</code><br>
+                                <span class="character-portuguese-phonetics">(RÊZ TRÊI-nin SKÉ-dju-õl ÊZ în-TÉNS)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Equipe/Time</td>
+                            <td><span class="example-word">Team</span><br><code>/tiːm/</code><br><span class="character-portuguese-phonetics">(TÍIM)</span></td>
+                            <td>
+                                Our team practices every day. <button onclick="playAudio('Our team practices every day')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Nossa equipe pratica todos os dias.</span><br>
+                                <code>/aʊər tiːm ˈpræktɪsɪz ˈevri deɪ/</code><br>
+                                <span class="character-portuguese-phonetics">(ÁU-ãr TÍIM PRÉK-tĩ-sêz É-vri DÊI)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jogador(a)</td>
+                            <td><span class="example-word">Player</span><br><code>/ˈpleɪər/</code><br><span class="character-portuguese-phonetics">(PLÊI-ãr)</span></td>
+                            <td>
+                                She is the best player on their team. <button onclick="playAudio('She is the best player on their team')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Ela é a melhor jogadora do time deles.</span><br>
+                                <code>/ʃiː ɪz ðə best ˈpleɪər ɑːn ðer tiːm/</code><br>
+                                <span class="character-portuguese-phonetics">(XÍI ÊZ dhã BÉST PLÊI-ãr ón dhér TÍIM)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jogo/Partida</td>
+                            <td><span class="example-word">Match</span><br><code>/mætʃ/</code><br><span class="character-portuguese-phonetics">(MÉTCH)</span></td>
+                            <td>
+                                The match starts at 7 PM. <button onclick="playAudio('The match starts at 7 PM')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">A partida começa às 19h.</span><br>
+                                <code>/ðə mætʃ stɑːrts æt ˈsevn piː em/</code><br>
+                                <span class="character-portuguese-phonetics">(dhã MÉCH STÁRTS ét SÉ-vãn PÍI-ÉM)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Competição</td>
+                            <td><span class="example-word">Competition</span><br><code>/ˌkɑːmpəˈtɪʃn/</code><br><span class="character-portuguese-phonetics">(cóm-pã-TÊ-shãn)</span></td>
+                            <td>
+                                The swimming competition is next month. <button onclick="playAudio('The swimming competition is next month')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">A competição de natação é no próximo mês.</span><br>
+                                <code>/ðə ˈswɪmɪŋ ˌkɑːmpəˈtɪʃn ɪz nekst mʌnθ/</code><br>
+                                <span class="character-portuguese-phonetics">(dhã SUÍ-min cóm-pã-TÊ-shãn ÊZ NÉKST MÂNTH)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Diariamente</td>
+                            <td><span class="example-word">Daily</span><br><code>/ˈdeɪli/</code><br><span class="character-portuguese-phonetics">(DÊI-li)</span></td>
+                            <td>
+                                He does his daily exercises. <button onclick="playAudio('He does his daily exercises')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Ele faz seus exercícios diários.</span><br>
+                                <code>/hiː dʌz hɪz ˈdeɪli ˈeksərsaɪzɪz/</code><br>
+                                <span class="character-portuguese-phonetics">(RÍI DÂZ RÊZ DÊI-li ÉK-sãr-sai-zêz)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Semanalmente</td>
+                            <td><span class="example-word">Weekly</span><br><code>/ˈwiːkli/</code><br><span class="character-portuguese-phonetics">(UÍI-kli)</span></td>
+                            <td>
+                                We have a team meeting once a week. <button onclick="playAudio('We have a team meeting once a week')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Temos uma reunião de equipe uma vez por semana.</span><br>
+                                <code>/wiː hæv ə tiːm ˈmiːtɪŋ wʌns ə wiːk/</code><br>
+                                <span class="character-portuguese-phonetics">(UÍI RÉV ã TÍIM MÍI-rin UÂNS ã UÍIK)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Saudável</td>
+                            <td><span class="example-word">Healthy</span><br><code>/ˈhelθi/</code><br><span class="character-portuguese-phonetics">(RÉL-thi)</span></td>
+                            <td>
+                                Exercise keeps us healthy. <button onclick="playAudio('Exercise keeps us healthy')" class="audio-link">🔊</button><br>
+                                <span class="translation-line">Exercício nos mantém saudáveis.</span><br>
+                                <code>/ˈeksərsaɪz kiːps ʌs ˈhelθi/</code><br>
+                                <span class="character-portuguese-phonetics">(ÉK-sãr-saiz KÍIPS ÂS RÉL-thi)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="tarefa-extra">
+            <div class="tarefa-extra">
+                <h3>Tarefa Extra: Reading and Comprehension</h3>
+                <h4>My Fitness Journey</h4>
+                <p>
+                    My name is Alex, and I want to tell you about my new routine. In the past, I hardly ever exercised. My days were usually very busy with work, and I often felt tired in the evenings. I rarely had the energy to do anything active. My friend, Sarah, is the opposite. She always finds time for exercise. Her favorite activity is running, and she sometimes participates in local races.
+                </p>
+                <p>
+                    One day, Sarah invited me to go for a walk with her. She didn't push me; she just wanted to show me that being active could be fun. We walked for about thirty minutes, and it was surprisingly nice. She told me, "You don't have to run a marathon. Just find something you like and do it for you." Her words really motivated me.
+                </p>
+                <p>
+                    So, I decided to make a change. I bought a new pair of running shoes and started with short jogs. At first, it was very difficult for me. My legs were sore, and I could only run for a few minutes. But I didn't give up. I remembered Sarah's advice. I started going to the park three times a week. Sometimes Sarah would join me, and we would encourage each other. Our friendship grew stronger because of our shared activity.
+                </p>
+                <p>
+                    Now, six months later, I can proudly say that I am a runner. I usually run about five kilometers without stopping. I never thought this would be possible. My energy levels are higher, and my health has improved a lot. It's not about being the fastest; it's about being consistent. My routine is simple, but it is my own, and it works for me. Their support was crucial, but my determination made it happen. I feel like a completely different person, and I am very happy with my new, healthy lifestyle.
+                </p>
+
+                <h4 style="margin-top: 25px;">Quiz</h4>
+                <p>Based on the text, what is the key to Alex's success in his fitness journey?</p>
+                <ul class="quiz-options">
+                    <li>a) Buying expensive equipment for his new hobby.</li>
+                    <li>b) Finding an enjoyable activity and maintaining consistency.</li>
+                    <li>c) Trying to run faster than Sarah in every training session.</li>
+                    <li>d) Hiring a famous personal trainer to guide him.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="continuar-aprendendo">
+            <h3>Como Continuar Aprendendo?</h3>
+            <div class="nota-gramatical" style="border-left-color: #27ae60; background-color: #e6f7ef;">
+                <h4 style="color:#27ae60;">Dicas para Dominar os Tópicos da Aula:</h4>
+                <ul class="exercise-list" style="list-style-type: disc;">
+                    <li><strong>Descreva sua Semana Esportiva:</strong> Escreva sobre as atividades físicas que você faz (ou gostaria de fazer) e com que frequência. Use os advérbios aprendidos.</li>
+                    <li><strong>Fale sobre os Pertences:</strong> Descreva os equipamentos esportivos seus e de seus amigos usando adjetivos possessivos (my racket, his ball, her shoes).</li>
+                    <li><strong>Crie Diálogos:</strong> Imagine que você está combinando uma atividade esportiva com um amigo. Use pronomes objeto e possessivos. Ex: "Can I use your ball? Yes, you can use it. My brother gave it to me."</li>
+                    <li><strong>Observe em Contexto:</strong> Ao ouvir músicas, assistir filmes ou ler sobre esportes em inglês, preste atenção em como os advérbios de frequência, pronomes objeto e adjetivos possessivos são usados.</li>
+                    <li><strong>Varie os Advérbios:</strong> Tente usar diferentes advérbios de frequência para descrever a mesma atividade, mudando o sentido. Ex: "I always run." vs. "I sometimes run."</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="exercicios">
+            <h3>Exercícios Práticos</h3>
+            <div class="secao-exercicios">
+                <h4>Parte 1: Escolha a Palavra Correta</h4>
+                <p>Complete as frases com a opção correta entre parênteses.</p>
+                <ol class="exercise-list">
+                    <li>She <span class="fill-in-blank"></span> (always / never) goes to the gym because she doesn't like it.</li>
+                    <li>This is <span class="fill-in-blank"></span> (my / me) favorite yoga mat.</li>
+                    <li>He often plays soccer with <span class="fill-in-blank"></span> (they / them).</li>
+                    <li>We <span class="fill-in-blank"></span> (sometimes / never) swim in the ocean during winter; it's too cold.</li>
+                    <li>Is this <span class="fill-in-blank"></span> (your / you) water bottle?</li>
+                    <li>The coach gave <span class="fill-in-blank"></span> (his / him) some advice.</li>
+                    <li><span class="fill-in-blank"></span> (Our / Us) team usually practices in the morning.</li>
+                    <li>I rarely see <span class="fill-in-blank"></span> (her / she) at the running track.</li>
+                </ol>
+
+                <h4>Parte 2: Reescreva as Frases</h4>
+                <p>Coloque o advérbio de frequência na posição correta na frase.</p>
+                <ol class="exercise-list">
+                    <li>I go cycling on weekends. (often) → <span class="fill-in-blank"></span>.</li>
+                    <li>He is tired after training. (sometimes) → <span class="fill-in-blank"></span>.</li>
+                    <li>They don't miss a game. (usually) → <span class="fill-in-blank"></span>.</li>
+                    <li>She can run very fast. (always) → <span class="fill-in-blank"></span>.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Seção de Gabarito das Questões -->
+        <section id="gabarito-aula">
+            <div class="secao-gabarito">
+                <h4>Gabarito das Questões</h4>
+                <p><strong>Tarefa Extra (Quiz):</strong> A resposta correta é a letra <strong>b) Finding an enjoyable activity and maintaining consistency.</strong></p>
+                <p><strong>Parte 1: Escolha a Palavra Correta</strong></p>
+                <ol>
+                    <li>She <strong>never</strong> goes to the gym because she doesn't like it.</li>
+                    <li>This is <strong>my</strong> favorite yoga mat.</li>
+                    <li>He often plays soccer with <strong>them</strong>.</li>
+                    <li>We <strong>never</strong> swim in the ocean during winter; it's too cold.</li>
+                    <li>Is this <strong>your</strong> water bottle?</li>
+                    <li>The coach gave <strong>him</strong> some advice.</li>
+                    <li><strong>Our</strong> team usually practices in the morning.</li>
+                    <li>I rarely see <strong>her</strong> at the running track.</li>
+                </ol>
+                <p><strong>Parte 2: Reescreva as Frases</strong></p>
+                <ol>
+                    <li>I <strong>often</strong> go cycling on weekends.</li>
+                    <li>He is <strong>sometimes</strong> tired after training. (ou: Sometimes he is tired after training.)</li>
+                    <li>They don't <strong>usually</strong> miss a game. (ou: They usually don't miss a game.)</li>
+                    <li>She can <strong>always</strong> run very fast.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="conclusao">
+            <h3>Conclusão</h3>
+            <p>Parabéns por completar a Aula 7! Você aprendeu ferramentas importantes para detalhar suas frases: advérbios de frequência, pronomes objeto e adjetivos possessivos. Agora você pode falar com muito mais precisão sobre seus hábitos esportivos e de outras pessoas.</p>
+            <p>Continue praticando essas estruturas para que se tornem naturais na sua fala e escrita.</p>
+            <p>Na Aula 8: "O Que Está Acontecendo Agora? – Presente Contínuo", vamos aprender um novo tempo verbal para descrever ações que estão acontecendo no momento da fala. Isso adicionará ainda mais dinamismo à sua comunicação! Até lá!</p>
+        </section>
+
+        <!-- Menu Inferior -->
+        <div class="nav-menu">
+            <a href="https://espaco-liberdade.github.io/inglesipa/" class="btn-menu">⬅ Voltar ao Menu</a>
+        </div>
+    </div>
+
+    <script>
+        function playAudio(text) {
+            // Verifica se o navegador suporta a Web Speech API
+            if ('speechSynthesis' in window) {
+                // Cancela qualquer áudio em andamento
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-US'; // Define o idioma para Inglês Americano
+                utterance.rate = 0.85; // Velocidade ligeiramente mais lenta para fins didáticos
+                
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert("Desculpe, seu navegador não suporta a tecnologia de reprodução de áudio. Recomendamos o uso do Google Chrome, Edge ou Safari.");
+            }
+        }
+    </script>
+</body>
+</html>
