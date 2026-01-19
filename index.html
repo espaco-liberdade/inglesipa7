@@ -140,17 +140,6 @@
         .quiz-options li { margin-bottom: 10px; padding: 5px; background: #fff; border-radius: 4px; }
         .exercise-list { list-style-type: decimal; padding-left: 20px; }
         .exercise-list li { margin-bottom: 15px; }
-        
-        .hidden-answer {
-            background-color: #333;
-            color: #333;
-            padding: 2px 8px;
-            border-radius: 4px;
-            cursor: pointer;
-            user-select: none;
-            transition: all 0.3s;
-        }
-        .hidden-answer:hover { color: #fff; }
 
         @media (max-width: 768px) {
             .container { padding: 15px; }
@@ -209,7 +198,7 @@
                     <span class="character-portuguese-phonetics">(DHÊI SÂM-taimz GÔU SÁI-klin în dhã PÁRK)</span>
                 </li>
                 <li>
-                    <strong>Seldom / Rarely</strong> (Raramente - 10-20%) <button onclick="playAudio('Rarely')" class="audio-link">🔊</button> - <code>/ˈrerli/</code> <span class="character-portuguese-phonetics">(RÉRLI)</span>
+                    <strong>Rarely</strong> (Raramente - 10-20%) <button onclick="playAudio('Rarely')" class="audio-link">🔊</button> - <code>/ˈrerli/</code> <span class="character-portuguese-phonetics">(RÉRLI)</span>
                     <br>Ex: He <span class="example-word">rarely</span> misses a training session. <button onclick="playAudio('He rarely misses a training session')" class="audio-link">🔊</button>
                     <br>Tradução: <strong>Ele raramente perde um treino.</strong>
                     <br><span class="ipa-phrase-block"><code>/hiː ˈrerli ˈmɪsɪz ə ˈtreɪnɪŋ ˈseʃn/</code></span>
@@ -289,7 +278,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>I (Eu)</td>
+                            <td>I</td>
                             <td><strong>me</strong> (mim, me)</td>
                             <td>He plays tennis with <span class="example-word">me</span>. <button onclick="playAudio('He plays tennis with me')" class="audio-link">🔊</button></td>
                             <td>
@@ -299,7 +288,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>You (Você)</td>
+                            <td>You</td>
                             <td><strong>you</strong> (você, te, ti)</td>
                             <td>The coach trains <span class="example-word">you</span> well. <button onclick="playAudio('The coach trains you well')" class="audio-link">🔊</button></td>
                             <td>
@@ -309,7 +298,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>He (Ele)</td>
+                            <td>He</td>
                             <td><strong>him</strong> (ele, o, lhe)</td>
                             <td>She passed the ball to <span class="example-word">him</span>. <button onclick="playAudio('She passed the ball to him')" class="audio-link">🔊</button></td>
                             <td>
@@ -319,7 +308,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>She (Ela)</td>
+                            <td>She</td>
                             <td><strong>her</strong> (ela, a, lhe)</td>
                             <td>We invited <span class="example-word">her</span> to play volleyball. <button onclick="playAudio('We invited her to play volleyball')" class="audio-link">🔊</button></td>
                             <td>
@@ -329,7 +318,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>It (Ele/Ela)</td>
+                            <td>It</td>
                             <td><strong>it</strong> (ele/ela, o/a, lhe)</td>
                             <td>The dog chases <span class="example-word">it</span> (the ball). <button onclick="playAudio('The dog chases it')" class="audio-link">🔊</button></td>
                             <td>
@@ -339,7 +328,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>We (Nós)</td>
+                            <td>We</td>
                             <td><strong>us</strong> (nós, nos)</td>
                             <td>They always beat <span class="example-word">us</span> at soccer. <button onclick="playAudio('They always beat us at soccer')" class="audio-link">🔊</button></td>
                             <td>
@@ -349,7 +338,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>They (Eles)</td>
+                            <td>They</td>
                             <td><strong>them</strong> (eles/elas, os/as, lhes)</td>
                             <td>I see <span class="example-word">them</span> running every morning. <button onclick="playAudio('I see them running every morning')" class="audio-link">🔊</button></td>
                             <td>
@@ -389,7 +378,7 @@
                         </tr>
                         <tr>
                             <td>You</td>
-                            <td><strong>your</strong> (seu/sua)</td>
+                            <td><strong>your</strong> (seu/sua/teu/tua)</td>
                             <td>Where are <span class="example-word">your</span> running shoes? <button onclick="playAudio('Where are your running shoes?')" class="audio-link">🔊</button></td>
                             <td>
                                 <span class="translation-line">Onde estão seus tênis de corrida?</span>
@@ -419,7 +408,7 @@
                         </tr>
                         <tr>
                             <td>It</td>
-                            <td><strong>its</strong> (dele/dela)</td>
+                            <td><strong>its</strong> (dele/dela - para coisa/animal)</td>
                             <td>The team celebrates <span class="example-word">its</span> victory. <button onclick="playAudio('The team celebrates its victory')" class="audio-link">🔊</button></td>
                             <td>
                                 <span class="translation-line">O time celebra sua vitória.</span>
@@ -498,7 +487,7 @@
                     <tbody>
                         <tr>
                             <td>Futebol</td>
-                            <td><span class="example-word">Soccer</span><br><code>/ˈsɑːkər/</code><br><span class="character-portuguese-phonetics">(SÓ-cãr)</span></td>
+                            <td><span class="example-word">Soccer</span> (US) / <span class="example-word">Football</span> (UK)<br><code>/ˈsɑːkər/</code> / <code>/ˈfʊtbɔːl/</code><br><span class="character-portuguese-phonetics">(SÓ-cãr) / (FÚT-ból)</span></td>
                             <td>
                                 They often play soccer after school. <button onclick="playAudio('They often play soccer after school')" class="audio-link">🔊</button><br>
                                 <span class="translation-line">Eles frequentemente jogam futebol depois da escola.</span><br>
@@ -517,7 +506,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Tênis</td>
+                            <td>Tênis (esporte)</td>
                             <td><span class="example-word">Tennis</span><br><code>/ˈtenɪs/</code><br><span class="character-portuguese-phonetics">(TÉ-nês)</span></td>
                             <td>
                                 Do you play tennis? <button onclick="playAudio('Do you play tennis?')" class="audio-link">🔊</button><br>
@@ -537,8 +526,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Corrida</td>
-                            <td><span class="example-word">Running</span><br><code>/ˈrʌnɪŋ/</code><br><span class="character-portuguese-phonetics">(RÂ-nin)</span></td>
+                            <td>Corrida / Correr</td>
+                            <td><span class="example-word">Running</span> / <span class="example-word">Run</span><br><code>/ˈrʌnɪŋ/</code> / <code>/rʌn/</code><br><span class="character-portuguese-phonetics">(RÂ-nin) / (RÂN)</span></td>
                             <td>
                                 I go running three times a week. <button onclick="playAudio('I go running three times a week')" class="audio-link">🔊</button><br>
                                 <span class="translation-line">Eu corro três vezes por semana.</span><br>
@@ -577,7 +566,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Exercício</td>
+                            <td>Exercício / Exercitar-se</td>
                             <td><span class="example-word">Exercise</span><br><code>/ˈeksərsaɪz/</code><br><span class="character-portuguese-phonetics">(ÉK-sãr-saiz)</span></td>
                             <td>
                                 We exercise to stay healthy. <button onclick="playAudio('We exercise to stay healthy')" class="audio-link">🔊</button><br>
@@ -587,8 +576,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Aquecimento</td>
-                            <td><span class="example-word">Warm-up</span><br><code>/ˈwɔːrm ʌp/</code><br><span class="character-portuguese-phonetics">(UÓRM ÂP)</span></td>
+                            <td>Aquecimento / Aquecer</td>
+                            <td><span class="example-word">Warm-up</span> / <span class="example-word">To warm up</span><br><code>/ˈwɔːrm ʌp/</code><br><span class="character-portuguese-phonetics">(UÓRM ÂP)</span></td>
                             <td>
                                 A good warm-up is always important. <button onclick="playAudio('A good warm-up is always important')" class="audio-link">🔊</button><br>
                                 <span class="translation-line">Um bom aquecimento é sempre importante.</span><br>
@@ -597,8 +586,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Alongamento</td>
-                            <td><span class="example-word">Stretching</span><br><code>/ˈstretʃɪŋ/</code><br><span class="character-portuguese-phonetics">(STRÉ-tchin)</span></td>
+                            <td>Alongamento / Alongar</td>
+                            <td><span class="example-word">Stretching</span> / <span class="example-word">To stretch</span><br><code>/ˈstretʃɪŋ/</code><br><span class="character-portuguese-phonetics">(STRÉ-tchin)</span></td>
                             <td>
                                 I usually do my stretching after my run. <button onclick="playAudio('I usually do my stretching after my run')" class="audio-link">🔊</button><br>
                                 <span class="translation-line">Eu geralmente faço meu alongamento depois da minha corrida.</span><br>
@@ -607,8 +596,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Treino</td>
-                            <td><span class="example-word">Training</span><br><code>/ˈtreɪnɪŋ/</code><br><span class="character-portuguese-phonetics">(TRÊI-nin)</span></td>
+                            <td>Treinar / Treino</td>
+                            <td><span class="example-word">Train</span> / <span class="example-word">Training</span><br><code>/treɪn/</code> / <code>/ˈtreɪnɪŋ/</code><br><span class="character-portuguese-phonetics">(TRÊIN) / (TRÊI-nin)</span></td>
                             <td>
                                 His training schedule is intense. <button onclick="playAudio('His training schedule is intense')" class="audio-link">🔊</button><br>
                                 <span class="translation-line">O cronograma de treino dele é intenso.</span><br>
@@ -617,7 +606,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Equipe/Time</td>
+                            <td>Equipe / Time</td>
                             <td><span class="example-word">Team</span><br><code>/tiːm/</code><br><span class="character-portuguese-phonetics">(TÍIM)</span></td>
                             <td>
                                 Our team practices every day. <button onclick="playAudio('Our team practices every day')" class="audio-link">🔊</button><br>
@@ -637,8 +626,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Jogo/Partida</td>
-                            <td><span class="example-word">Match</span><br><code>/mætʃ/</code><br><span class="character-portuguese-phonetics">(MÉTCH)</span></td>
+                            <td>Jogo / Partida</td>
+                            <td><span class="example-word">Game</span> / <span class="example-word">Match</span><br><code>/ɡeɪm/</code> / <code>/mætʃ/</code><br><span class="character-portuguese-phonetics">(GUÊIM) / (MÉTCH)</span></td>
                             <td>
                                 The match starts at 7 PM. <button onclick="playAudio('The match starts at 7 PM')" class="audio-link">🔊</button><br>
                                 <span class="translation-line">A partida começa às 19h.</span><br>
@@ -657,8 +646,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Diariamente</td>
-                            <td><span class="example-word">Daily</span><br><code>/ˈdeɪli/</code><br><span class="character-portuguese-phonetics">(DÊI-li)</span></td>
+                            <td>Diariamente / Todo dia</td>
+                            <td><span class="example-word">Daily</span> / <span class="example-word">Every day</span><br><code>/ˈdeɪli/</code> / <code>/ˈevri deɪ/</code><br><span class="character-portuguese-phonetics">(DÊI-li) / (É-vri DÊI)</span></td>
                             <td>
                                 He does his daily exercises. <button onclick="playAudio('He does his daily exercises')" class="audio-link">🔊</button><br>
                                 <span class="translation-line">Ele faz seus exercícios diários.</span><br>
@@ -667,8 +656,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Semanalmente</td>
-                            <td><span class="example-word">Weekly</span><br><code>/ˈwiːkli/</code><br><span class="character-portuguese-phonetics">(UÍI-kli)</span></td>
+                            <td>Semanalmente / Uma vez por semana</td>
+                            <td><span class="example-word">Weekly</span> / <span class="example-word">Once a week</span><br><code>/ˈwiːkli/</code> / <code>/wʌns ə wiːk/</code><br><span class="character-portuguese-phonetics">(UÍI-kli) / (UÂNS ã UÍIK)</span></td>
                             <td>
                                 We have a team meeting once a week. <button onclick="playAudio('We have a team meeting once a week')" class="audio-link">🔊</button><br>
                                 <span class="translation-line">Nós temos uma reunião de equipe uma vez por semana.</span><br>
